@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const orderSchema = mongoose.Schema(
 	{
-		users: {
+		user: {
 			type: mongoose.Schema.Types.ObjectId,
 			required: true,
 			ref: 'User',
@@ -26,7 +26,6 @@ const orderSchema = mongoose.Schema(
 			postalCode: { type: String, required: true },
 			country: { type: String, required: true },
 		},
-
 		paymentMethod: {
 			type: String,
 			required: true,
@@ -65,7 +64,7 @@ const orderSchema = mongoose.Schema(
 		paidAt: {
 			type: Date,
 		},
-		isDeliveredAt: {
+		isDelivered: {
 			type: Boolean,
 			required: true,
 			default: false,
@@ -74,7 +73,9 @@ const orderSchema = mongoose.Schema(
 			type: Date,
 		},
 	},
-	{ timestamps: true }
+	{
+		timestamps: true,
+	}
 );
 
 const Order = mongoose.model('Order', orderSchema);
