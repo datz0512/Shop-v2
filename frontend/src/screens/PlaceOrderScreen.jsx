@@ -25,6 +25,7 @@ const PlaceOrderScreen = () => {
 	}, [cart.paymentMethod, cart.shippingAddress.address, navigate]);
 
 	const dispatch = useDispatch();
+	
 	const placeOrderHandler = async () => {
 		try {
 			const res = await createOrder({
