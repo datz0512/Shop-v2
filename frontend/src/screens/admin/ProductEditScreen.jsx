@@ -168,8 +168,8 @@ const ProductEditScreen = () => {
 						<FormGroup controlId='description' className='my-2'>
 							<Form.Label>Description</Form.Label>
 							<Form.Control
-								type='text'
-								placeholder='Enter description'
+								as='textarea'
+								row='5'
 								value={description}
 								onChange={e => setDescription(e.target.value)}
 							></Form.Control>
