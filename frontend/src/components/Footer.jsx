@@ -1,16 +1,16 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { MDBFooter } from 'mdb-react-ui-kit';
 
 const Footer = () => {
-	const currentYear = new Date().getFullYear();
 	return (
-		<footer>
-			<Container>
-				<Row>
-					<Col className='text-center py-3'> DatzShop &copy; {currentYear}</Col>
-				</Row>
-			</Container>
-		</footer>
+		<MDBFooter className='bg-dark'>
+			<div className='text-white text-center p-5'>
+				© 2024 Copyright:
+				<a className='text-white' href='/'>
+					DatzShop
+				</a>
+			</div>
+		</MDBFooter>
 	);
 };
 

@@ -11,9 +11,9 @@ import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import { HelmetProvider } from 'react-helmet-async';
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/styles/bootstrap.custom.css';
-import './assets/styles/index.css';
 import './index.css';
+import './assets/styles/index.css';
+import './assets/styles/bootstrap.custom.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import PrivateRoute from './components/PrivateRoute';
