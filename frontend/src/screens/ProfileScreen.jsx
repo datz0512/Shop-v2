@@ -10,6 +10,7 @@ import Loader from '../components/Loader';
 import { useProfileMutation } from '../slices/usersApiSlice';
 import { useGetMyOrdersQuery } from '../slices/ordersApiSlice';
 import { setCredentials } from '../slices/authSlice';
+import Meta from '../components/Meta';
 
 const ProfileScreen = () => {
 	const [name, setName] = useState('');
@@ -56,6 +57,7 @@ const ProfileScreen = () => {
 
 	return (
 		<Row>
+			<Meta title='Your profile' />
 			<Col md={3}>
 				<h2>User Profile</h2>
 				<Form onSubmit={submitHandler}>

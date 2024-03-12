@@ -1,15 +1,18 @@
 import { LinkContainer } from 'react-router-bootstrap';
 import { Table, Button } from 'react-bootstrap';
 import { FaTimes } from 'react-icons/fa';
+
 import Message from '../../components/Message';
 import Loader from '../../components/Loader';
 import { useGetOrdersQuery } from '../../slices/ordersApiSlice';
+import Meta from '../../components/Meta';
 
 const OrderListScreen = () => {
 	const { data: orders, isLoading, error } = useGetOrdersQuery();
 
 	return (
 		<>
+			<Meta title='Admin Orders' />
 			<h1>Orders</h1>
 			{isLoading ? (
 				<Loader />

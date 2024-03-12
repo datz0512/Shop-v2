@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import logo from '../assets/logo.png';
 import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
+import SearchBox from './SearchBox';
 
 const Header = () => {
 	const { cartItems } = useSelector(state => state.cart);
@@ -34,12 +35,18 @@ const Header = () => {
 				<Container>
 					<LinkContainer to='/'>
 						<Navbar.Brand>
-							<img src={logo} width='140px' alt='DatzShop' />
+							<img src={logo} height='60' alt='DatzShop' />
 						</Navbar.Brand>
 					</LinkContainer>
+
 					<Navbar.Toggle aria-controls='basic-navbar-nav' />
+
 					<Navbar.Collapse id='basic-navbar-nav'>
 						<Nav className='ms-auto'>
+							<div style={{ paddingRight: '8rem' }}>
+								<SearchBox />
+							</div>
+
 							<LinkContainer to='/cart'>
 								<Nav.Link>
 									<FaShoppingCart /> Cart
@@ -50,6 +57,7 @@ const Header = () => {
 									)}
 								</Nav.Link>
 							</LinkContainer>
+
 							<LinkContainer to='/login'>
 								{userInfo ? (
 									<NavDropdown title={userInfo.name} id='username'>
@@ -66,6 +74,7 @@ const Header = () => {
 									</Nav.Link>
 								)}
 							</LinkContainer>
+
 							{userInfo && userInfo.isAdmin && (
 								<NavDropdown title='Admin' id='adminmenu'>
 									<LinkContainer to='/admin/productlist'>

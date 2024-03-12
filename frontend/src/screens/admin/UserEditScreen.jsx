@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Form, Button, FormGroup } from 'react-bootstrap';
+
 import Message from '../../components/Message';
 import Loader from '../../components/Loader';
 import FormContainer from '../../components/FormContainer';
@@ -9,6 +10,7 @@ import {
 	useUpdateUserMutation,
 	useGetUserDetailsQuery,
 } from '../../slices/usersApiSlice';
+import Meta from '../../components/Meta';
 
 const UserEditScreen = () => {
 	const { id: userId } = useParams();
@@ -46,6 +48,7 @@ const UserEditScreen = () => {
 
 	return (
 		<>
+			<Meta title='Admin Edit User' />
 			<Link to='/admin/userlist' className='btn btn-light my-3'>
 				Go Back
 			</Link>

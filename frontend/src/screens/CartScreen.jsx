@@ -12,6 +12,7 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { FaTrash } from 'react-icons/fa';
 
+import Meta from '../components/Meta';
 import Message from '../components/Message';
 import { addToCart, removeFromCart } from '../slices/cartSlice';
 
@@ -36,6 +37,7 @@ const CartScreen = () => {
 
 	return (
 		<Row>
+			<Meta title='Cart' />
 			<Col md={8}>
 				<h1 style={{ marginBottom: '20px' }}>Shopping Cart</h1>
 				{cartItems.length === 0 ? (
