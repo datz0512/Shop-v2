@@ -66,7 +66,7 @@ const OrderScreen = () => {
 				await payOrder({
 					orderId: order._id,
 					details,
-				});
+				}).unwrap();
 				toast.success('Payment successful');
 				refetch();
 			} catch (err) {
@@ -117,7 +117,7 @@ const OrderScreen = () => {
 	return isLoading ? (
 		<Loader />
 	) : error ? (
-		<Messase variant='danger'>{error}</Messase>
+		<Messase variant='danger'>{error?.data?.message || error.error}</Messase>
 	) : (
 		<>
 			<Meta title={`Order`} />
