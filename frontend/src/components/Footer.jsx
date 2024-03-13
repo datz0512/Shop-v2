@@ -1,16 +1,15 @@
 import React from 'react';
-import { MDBFooter } from 'mdb-react-ui-kit';
 
 const Footer = () => {
 	return (
-		<MDBFooter className='bg-dark'>
+		<footer className='bg-dark bottom footer'>
 			<div className='text-white text-center p-5'>
 				© 2024 Copyright:
 				<a className='text-white' href='/'>
 					DatzShop
 				</a>
 			</div>
-		</MDBFooter>
+		</footer>
 	);
 };
 

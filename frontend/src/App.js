@@ -9,16 +9,16 @@ import Footer from './components/Footer';
 
 const App = () => {
 	return (
-		<>
+		<div id='container'>
 			<Header />
-			<main className='py-3'>
+			<main className='py-3' id='content'>
 				<Container>
 					<Outlet />
 				</Container>
 			</main>
 			<Footer />
 			<ToastContainer />
-		</>
+		</div>
 	);
 };
 
