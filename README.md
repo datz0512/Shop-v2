@@ -106,6 +106,6 @@ tomriu@email.com (Customer)
 
 ```
 Sample Paypal Logins
-email: sb-pe3k729594475@business.example.com
-password: _ok!3&QN
+email: sb-4ncvp29987864@personal.example.com
+password: U?@?2q?=
 ```
