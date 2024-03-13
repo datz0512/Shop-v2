@@ -48,7 +48,7 @@ async function getPayPalAccessToken() {
  *
  */
 export async function checkIfNewTransaction(orderModel, paypalTransactionId) {
-	try {
+  try {
 		// Find all documents where Order.paymentResult.id is the same as the id passed paypalTransactionId
 		const orders = await orderModel.find({
 			'paymentResult.id': paypalTransactionId,
